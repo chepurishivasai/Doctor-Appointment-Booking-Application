@@ -1,4 +1,4 @@
-/* 🌐 General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ body {
   flex-direction: column;
 }
 
-/* 🩺 Header & Navbar */
+
 header {
   background: linear-gradient(90deg, #0077b6, #00b4d8);
   padding: 15px 0;
@@ -59,7 +59,7 @@ nav {
   color: #caf0f8;
 }
 
-/* 🔹 Underline animation */
+
 .nav-links li a::after {
   content: "";
   position: absolute;
@@ -76,7 +76,7 @@ nav {
   width: 100%;
 }
 
-/* 🏠 Home Page */
+
 .home-main {
   text-align: center;
   padding: 80px 20px;
@@ -129,7 +129,7 @@ nav {
   color: #fff;
 }
 
-/* 📞 Contact Section (on home page) */
+
 .contact-img {
   margin-top: 50px;
 }
@@ -144,7 +144,7 @@ nav {
   transform: scale(1.1);
 }
 
-/* 🩺 Book Appointment Page */
+
 .form-container {
   width: 90%;
   max-width: 600px;
@@ -191,7 +191,6 @@ nav {
   box-shadow: 0 0 4px rgba(0,180,216,0.4);
 }
 
-/* 👩‍⚕️ Doctors List */
 .doctors-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -218,7 +217,7 @@ nav {
   margin-bottom: 5px;
 }
 
-/* 🗓 Appointments Page */
+
 .appointments-page {
   padding: 40px 20px;
   text-align: center;
@@ -245,12 +244,12 @@ nav {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 💳 Payment Page */
+
 #paymentForm .input-group {
   margin-bottom: 15px;
 }
 
-/* 📨 Contact Page */
+
 .contact-page {
   width: 90%;
   max-width: 600px;
@@ -273,7 +272,7 @@ nav {
   resize: none;
 }
 
-/* ✅ Confirmation Section */
+
 .confirmation-card {
   background: #fff;
   padding: 20px;
@@ -304,7 +303,7 @@ nav {
   color: #fff;
 }
 
-/* 🦶 Footer */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -314,7 +313,6 @@ footer {
   margin-top: auto;
 }
 
-/* 📱 Responsive */
 @media (max-width: 768px) {
   .nav-links {
     flex-wrap: wrap;
@@ -332,3 +330,4 @@ footer {
     padding: 20px;
   }
 }
+
