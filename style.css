@@ -1,0 +1,334 @@
+/* 🌐 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f8faff;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🩺 Header & Navbar */
+header {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #caf0f8;
+}
+
+/* 🔹 Underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #caf0f8;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* 🏠 Home Page */
+.home-main {
+  text-align: center;
+  padding: 80px 20px;
+  flex: 1;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  color: #0077b6;
+}
+
+.hero p {
+  margin: 10px 0 30px;
+  color: #555;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn, .btn-outline {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #0077b6;
+}
+
+.btn-outline {
+  border: 2px solid #00b4d8;
+  color: #0077b6;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+/* 📞 Contact Section (on home page) */
+.contact-img {
+  margin-top: 50px;
+}
+
+.contact-img img {
+  width: 80px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-img img:hover {
+  transform: scale(1.1);
+}
+
+/* 🩺 Book Appointment Page */
+.form-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #00b4d8;
+  box-shadow: 0 0 4px rgba(0,180,216,0.4);
+}
+
+/* 👩‍⚕️ Doctors List */
+.doctors-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.doctor-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.doctor-card h3 {
+  color: #0077b6;
+  margin-bottom: 5px;
+}
+
+/* 🗓 Appointments Page */
+.appointments-page {
+  padding: 40px 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.appointments-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.appointment-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 💳 Payment Page */
+#paymentForm .input-group {
+  margin-bottom: 15px;
+}
+
+/* 📨 Contact Page */
+.contact-page {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+.contact-page h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.contact-page textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* ✅ Confirmation Section */
+.confirmation-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.confirmation-card h3 {
+  margin-top: 0;
+  color: #0077b6;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 2px solid #0077b6;
+  color: #0077b6;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #0077b6;
+  color: #fff;
+}
+
+/* 🦶 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0077b6;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-container,
+  .contact-page {
+    width: 95%;
+    padding: 20px;
+  }
+}
