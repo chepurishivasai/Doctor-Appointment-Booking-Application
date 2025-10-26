@@ -100,7 +100,7 @@ function deleteAppointment(index) {
 }
 
 
-// ---------------- Confirmation Page + PDF Download ----------------
+
 if (window.location.pathname.includes("confirmation.html")) {
   const { jsPDF } = window.jspdf;
   const appointments = JSON.parse(localStorage.getItem("appointments") || "[]");
@@ -132,3 +132,4 @@ if (window.location.pathname.includes("confirmation.html")) {
     doc.save("Appointment_Confirmation.pdf");
   });
 }
+
